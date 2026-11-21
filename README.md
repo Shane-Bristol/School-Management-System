@@ -1,4 +1,4 @@
-chool Management System
+School Management System
 
 A security-first web application for managing students, teachers, attendance, grades, and academic records, built with Laravel.
 
