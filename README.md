@@ -49,9 +49,9 @@ Audit log for create, update, and delete actions
 A threat model and full security notes will live in SECURITY.md.
 
 Roadmap
-[ ] Database design and schema (users, roles, students, classes, attendance, audit log)
-[ ] Threat model
-[ ] Authentication
+[x] Database design and schema (users, roles, students, classes, attendance, audit log)
+[x] Threat model
+[x] Authentication
 [ ] Role-based access control
 [ ] Student management
 [ ] Attendance module
