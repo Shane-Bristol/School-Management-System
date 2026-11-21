@@ -13,6 +13,7 @@ Student records are sensitive, so the project is built around three rules:
 Least privilege: every user sees only what their role requires.
 Everything is auditable: changes to grades and attendance are logged with who, what, and when.
 No real data: development and demos use generated fake data only.
+
 Planned Features
 
 Version 1 (current focus)
