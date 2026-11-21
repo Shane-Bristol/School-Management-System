@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Enums\Role;
 use App\Models\User;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Support\Facades\Hash;
@@ -20,6 +21,9 @@ class UserFactory extends Factory
     /**
      * Define the model's default state.
      *
+     * Test users look like real accounts: an active teacher. Factories bypass
+     * mass-assignment protection, so role and is_active can be set here.
+     *
      * @return array<string, mixed>
      */
     public function definition(): array
@@ -30,6 +34,8 @@ class UserFactory extends Factory
             'email_verified_at' => now(),
             'password' => static::$password ??= Hash::make('password'),
             'remember_token' => Str::random(10),
+            'role' => Role::Teacher->value,
+            'is_active' => true,
             'two_factor_secret' => null,
             'two_factor_recovery_codes' => null,
             'two_factor_confirmed_at' => null,
@@ -43,6 +49,36 @@ class UserFactory extends Factory
     {
         return $this->state(fn (array $attributes) => [
             'email_verified_at' => null,
+        ]);
+    }
+
+    /**
+     * Indicate that the user is an administrator.
+     */
+    public function admin(): static
+    {
+        return $this->state(fn (array $attributes) => [
+            'role' => Role::Admin->value,
+        ]);
+    }
+
+    /**
+     * Indicate that the user is a teacher (the default).
+     */
+    public function teacher(): static
+    {
+        return $this->state(fn (array $attributes) => [
+            'role' => Role::Teacher->value,
+        ]);
+    }
+
+    /**
+     * Indicate that the account has been disabled.
+     */
+    public function disabled(): static
+    {
+        return $this->state(fn (array $attributes) => [
+            'is_active' => false,
         ]);
     }
 
