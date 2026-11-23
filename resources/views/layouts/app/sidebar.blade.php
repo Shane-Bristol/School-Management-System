@@ -16,9 +16,13 @@
                         {{ __('Dashboard') }}
                     </flux:sidebar.item>
 
-                    @can('manage-users')
+                                        @can('manage-users')
                         <flux:sidebar.item icon="users" :href="route('admin.users')" :current="request()->routeIs('admin.users')" wire:navigate>
                             {{ __('Staff accounts') }}
+                        </flux:sidebar.item>
+
+                        <flux:sidebar.item icon="academic-cap" :href="route('admin.classes')" :current="request()->routeIs('admin.classes')" wire:navigate>
+                            {{ __('Classes') }}
                         </flux:sidebar.item>
                     @endcan
                 </flux:sidebar.group>

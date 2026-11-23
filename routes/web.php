@@ -13,6 +13,7 @@ Route::middleware(['auth', 'verified', 'can:manage-users'])
     ->prefix('admin')
     ->group(function () {
         Route::livewire('users', 'pages::admin.users')->name('admin.users');
+        Route::livewire('classes', 'pages::admin.classes')->name('admin.classes');
     });
 
 require __DIR__.'/settings.php';
