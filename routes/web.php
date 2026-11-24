@@ -6,6 +6,8 @@ Route::view('/', 'welcome')->name('home');
 
 Route::middleware(['auth', 'verified'])->group(function () {
     Route::view('dashboard', 'dashboard')->name('dashboard');
+    Route::livewire('students', 'pages::students.index')->name('students.index');
+
 });
 
 // Admin-only area. A teacher who types the URL gets a 403.
