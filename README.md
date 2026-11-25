@@ -56,8 +56,8 @@ A threat model and full security notes will live in `SECURITY.md`.
 - [x] Database design and schema (users, roles, students, classes, attendance, audit log)
 - [x] Threat model
 - [x] Authentication
-- [ ] Role-based access control
-- [ ] Student management
+- [x] Role-based access control
+- [x] Student management
 - [ ] Attendance module
 - [ ] Audit logging
 - [ ] SECURITY.md and documentation
