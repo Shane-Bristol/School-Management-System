@@ -21,7 +21,7 @@
                             {{ __('Students') }}
                         </flux:sidebar.item>
                     @endcan
-                                        @can('viewAny', App\Models\SchoolClass::class)
+                    @can('viewAny', App\Models\SchoolClass::class)
                         <flux:sidebar.item icon="clipboard-document-check" :href="route('attendance.index')" :current="request()->routeIs('attendance.index')" wire:navigate>
                             {{ __('Attendance') }}
                         </flux:sidebar.item>
@@ -33,6 +33,9 @@
 
                         <flux:sidebar.item icon="academic-cap" :href="route('admin.classes')" :current="request()->routeIs('admin.classes')" wire:navigate>
                             {{ __('Classes') }}
+                        </flux:sidebar.item>
+                        <flux:sidebar.item icon="shield-check" :href="route('admin.audit-log')" :current="request()->routeIs('admin.audit-log')" wire:navigate>
+                            {{ __('Audit log') }}
                         </flux:sidebar.item>
                     @endcan
                 </flux:sidebar.group>

@@ -17,6 +17,7 @@ Route::middleware(['auth', 'verified', 'can:manage-users'])
     ->group(function () {
         Route::livewire('users', 'pages::admin.users')->name('admin.users');
         Route::livewire('classes', 'pages::admin.classes')->name('admin.classes');
-    });
+        Route::livewire('audit-log', 'pages::admin.audit-log')->name('admin.audit-log');
+        });
 
 require __DIR__.'/settings.php';
