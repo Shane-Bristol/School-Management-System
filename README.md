@@ -58,7 +58,7 @@ A threat model and full security notes will live in `SECURITY.md`.
 - [x] Authentication
 - [x] Role-based access control
 - [x] Student management
-- [ ] Attendance module
+- [x] Attendance module
 - [ ] Audit logging
 - [ ] SECURITY.md and documentation
 - [ ] Deployment on AWS
