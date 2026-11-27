@@ -15,9 +15,15 @@
                     <flux:sidebar.item icon="home" :href="route('dashboard')" :current="request()->routeIs('dashboard')" wire:navigate>
                         {{ __('Dashboard') }}
                     </flux:sidebar.item>
+
                     @can('viewAny', App\Models\Student::class)
                         <flux:sidebar.item icon="user-group" :href="route('students.index')" :current="request()->routeIs('students.index')" wire:navigate>
                             {{ __('Students') }}
+                        </flux:sidebar.item>
+                    @endcan
+                                        @can('viewAny', App\Models\SchoolClass::class)
+                        <flux:sidebar.item icon="clipboard-document-check" :href="route('attendance.index')" :current="request()->routeIs('attendance.index')" wire:navigate>
+                            {{ __('Attendance') }}
                         </flux:sidebar.item>
                     @endcan
                      @can('manage-users')

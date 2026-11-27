@@ -7,6 +7,7 @@ Route::view('/', 'welcome')->name('home');
 Route::middleware(['auth', 'verified'])->group(function () {
     Route::view('dashboard', 'dashboard')->name('dashboard');
     Route::livewire('students', 'pages::students.index')->name('students.index');
+    Route::livewire('attendance', 'pages::attendance.index')->name('attendance.index');
 
 });
 
