@@ -7,7 +7,7 @@ Last updated: 2026-11-20
 | Asset | Why it matters |
 |---|---|
 | Student records (names, dates of birth, class) | Personal data about minors |
-| Attendance records | Official school records; tampering has real consequences |
+| 10 | Audit log altered after the fact | Application only inserts; database triggers reject UPDATE and DELETE; the app's database account cannot drop them | Done |
 | Staff accounts and credentials | Gateway to everything else |
 | Audit log | Evidence of who changed what; must be trustworthy |
 | Application secrets (`.env`: app key, database password) | Compromise exposes everything |
