@@ -60,7 +60,7 @@ A threat model and full security notes will live in `SECURITY.md`.
 - [x] Student management
 - [x] Attendance module
 - [ ] Audit logging
-- [ ] SECURITY.md and documentation
+- [x] SECURITY.md and documentation
 - [ ] Deployment on AWS
 - [ ] Grades and report cards
 - [ ] Parent portal
